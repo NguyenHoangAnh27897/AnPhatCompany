@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Policy";
+}
+
+<!-- ABOUT APP -->
+<section id="about-smart" class="site-about-app left-heading section-grey" ng-controller="policyController">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+
+                <div class="about-half-colom-section">
+                    <!-- H1 HEADING -->
+                    <h1>{{policy.Title}}</h1>
+                    <div class="about-half-colom-section-content">
+                        <p ng-bind-html="policy.ContentPolicy | unsafe">
+                          
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/Content/Website/angular/policy/PolicyModel.js"></script>
+<script src="~/Content/Website/angular/policy/PolicyService.js"></script>
+<script src="~/Content/Website/angular/policy/PolicyController.js"></script>

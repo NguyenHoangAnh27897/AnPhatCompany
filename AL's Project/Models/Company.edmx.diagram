@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d9e9510fff3a47a68225915c51eeba80" Name="Diagram1">
+        <EntityTypeShape EntityType="CompanyModel.C_Project" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyModel.C_About" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CompanyModel.C_Mission" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CompanyModel.C_Policy" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CompanyModel.C_Contact" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CompanyModel.C_News" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="CompanyModel.C_Recruitment" Width="1.5" PointX="3.375" PointY="6.75" />
+        <EntityTypeShape EntityType="CompanyModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="CompanyModel.AspNetRole" Width="1.5" PointX="5.75" PointY="8.5" />
+        <EntityTypeShape EntityType="CompanyModel.AspNetUserClaim" Width="1.5" PointX="10.25" PointY="9.625" />
+        <EntityTypeShape EntityType="CompanyModel.AspNetUserLogin" Width="1.5" PointX="10.25" PointY="7" />
+        <EntityTypeShape EntityType="CompanyModel.AspNetUser" Width="1.5" PointX="8" PointY="7.375" />
+        <AssociationConnector Association="CompanyModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="CompanyModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="CompanyModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="CompanyModel.C_Slider" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CompanyModel.C_Homepage" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="CompanyModel.C_Product" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

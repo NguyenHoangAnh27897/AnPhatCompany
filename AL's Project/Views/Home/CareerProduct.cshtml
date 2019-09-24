@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "CareerProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- TESTIMONIAL -->
+<section class="site-testimonial section-grey" id="site-testimonial" ng-controller="productController">
+    <div class="container-fluid wide">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- H1 HEADING -->
+                <h1>{{product.CareerTitle}}</h1>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="main-heading-text">
+                        <p ng-bind-html="product.CareerContent | unsafe">
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                </div>
+
+                <div class="clearfix"> </div>
+
+                <!-- If we need navigation buttons -->
+                <div id="testimonial-prev" class="swiper-button-prev hidden-lg"><span class="icon-play-flip"></span></div>
+                <div id="testimonial-next" class="swiper-button-next hidden-lg"><span class="icon-play"></span></div>
+
+                <!-- If we need pagination -->
+                <div id="testimonial-paging" class="swiper-pagination"></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/Content/Website/angular/product/ProductModel.js"></script>
+<script src="~/Content/Website/angular/product/ProductService.js"></script>
+<script src="~/Content/Website/angular/product/ProductController.js"></script>
+

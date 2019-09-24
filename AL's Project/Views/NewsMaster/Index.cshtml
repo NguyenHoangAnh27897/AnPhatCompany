@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutWebmaster.cshtml";
+}
+
+<section class="wrapper" ng-controller="newsmasterController">
+    <h3><i class="fa fa-angle-right"></i>Tin tức</h3>
+    <div class="row mb ml">
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">{{Action}} tin tức</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label class="control-label">Tiêu đề</label>
+                            <input type="text" class="form-control round-form" ng-model="news.Title">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Hình ảnh đại diện</label>
+                            <input name="file" type="file" class="form-control" accept="image/*" onchange="angular.element(this).scope().UploadImage(this.files)">
+                            <small class="form-text text-muted">Chọn hình với kích cỡ 1024x768 hoặc lớn hơn</small>
+                            <img src="~/Images/News/{{news.Avatar}}" style="width:100%; height:50vh" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Vị trí tuyển dụng</label>
+                            <input type="text" class="form-control round-form" ng-model="news.Author">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Nội dung</label>
+                            <input type="text" id="content" class="form-control round-form" ng-model="news.ContentNews">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" ng-show="show" class="btn btn-primary" ng-click="AddNews(news)">Lưu</button>
+                        <button type="button" ng-hide="show" class="btn btn-primary" ng-click="EditNews(news)">Chỉnh sửa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- page start-->
+        <div class="content-panel">
+            <div class="adv-table">
+                <h4 style="float:left"><i class="fa fa-angle-right"></i>Danh sách tin tức</h4>
+                <button style="float:right" class="btn btn-round btn-primary" data-toggle="modal" data-target="#myModal" ng-click="addNews()">Thêm</button>
+                <section id="unseen">
+                    <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Tiêu đề</th>
+                                <th>Avatar</th>
+                                <th>Ngày đăng</th>
+                                <th>Người viết</th>
+                                <th>Chỉnh sửa</th>
+                                <th>Xoá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="gradeX" ng-repeat="n in newss">
+                                <td>{{n.Title}}</td>
+                                <td>
+                                    {{n.Avatar}}
+                                </td>
+                                <td>{{n.Date}}</td>
+                                <td>{{n.Author}}</td>
+                                <td><button class="btn btn-round btn-primary" data-toggle="modal" data-target="#myModal" ng-click="editNews(n.Id)"> Chỉnh sửa</button></td>
+                                <td><button class="btn btn-round btn-primary" ng-click="delete(n.Id, $index)">Xoá</button></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+        <!-- page end-->
+
+
+    </div><!-- /row -->
+
+</section>
+<script src="~/Content/Webmaster/assets/js/ckeditor/ckeditor.js"></script>
+<script src="~/Content/Webmaster/assets/js/ckeditor/samples/js/sample.js"></script>
+<script>
+    CKEDITOR.replace('content');
+</script>
+<script src="~/Content/WebMaster/angular/news/NewsMasterModel.js"></script>
+<script src="~/Content/WebMaster/angular/news/NewsMasterService.js"></script>
+<script src="~/Content/WebMaster/angular/news/NewsMasterController.js"></script>
+

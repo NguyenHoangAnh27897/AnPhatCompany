@@ -1,0 +1,769 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CompanyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="C_About">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="ContentAbout" Type="nvarchar(max)" />
+          <Property Name="Picture" Type="varchar" MaxLength="100" />
+          <Property Name="SubContent01" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubContent02" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="C_Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="Email" Type="nvarchar" MaxLength="500" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="C_Homepage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title01" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content01" Type="nvarchar" MaxLength="500" />
+          <Property Name="Title02" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content02" Type="nvarchar" MaxLength="500" />
+          <Property Name="Title03" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content03" Type="nvarchar" MaxLength="500" />
+          <Property Name="Picture01" Type="nvarchar" MaxLength="100" />
+          <Property Name="Title04" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubTitle01" Type="nvarchar(max)" />
+          <Property Name="TextTitle01" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text01" Type="nvarchar" MaxLength="100" />
+          <Property Name="TextTitle02" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text02" Type="nvarchar" MaxLength="100" />
+          <Property Name="TextTitle03" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text03" Type="nvarchar" MaxLength="100" />
+          <Property Name="TextTitle04" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text04" Type="nvarchar" MaxLength="100" />
+          <Property Name="TextTitle05" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text05" Type="nvarchar" MaxLength="100" />
+          <Property Name="TextTitle06" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text06" Type="nvarchar" MaxLength="100" />
+          <Property Name="Title05" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubTitle02" Type="nvarchar(max)" />
+          <Property Name="Title06" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubTitle03" Type="nvarchar(max)" />
+          <Property Name="Picture02" Type="nvarchar" MaxLength="100" />
+          <Property Name="Picture03" Type="nvarchar" MaxLength="100" />
+          <Property Name="Picture04" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="C_Mission">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubTitle" Type="nvarchar(max)" />
+          <Property Name="SubContentTitle01" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubContent01" Type="nvarchar(max)" />
+          <Property Name="SubContentTitle02" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubContent02" Type="nvarchar(max)" />
+          <Property Name="SubContentTitle03" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubContent03" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="C_News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Avatar" Type="varchar" MaxLength="100" />
+          <Property Name="ContentNews" Type="nvarchar(max)" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Author" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="C_Policy">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContentPolicy" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="C_Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CareerTitle" Type="nvarchar" MaxLength="200" />
+          <Property Name="CareerContent" Type="nvarchar(max)" />
+          <Property Name="BusinessTitle" Type="nvarchar" MaxLength="200" />
+          <Property Name="BusinessContent" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="C_Project">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Avatar" Type="varchar" MaxLength="100" />
+          <Property Name="ContentProject" Type="nvarchar(max)" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Author" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="C_Recruitment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContentRecruit" Type="nvarchar(max)" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+          <Property Name="Picture" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="C_Slider">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubTitle" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CompanyModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_About" EntityType="Self.C_About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_Contact" EntityType="Self.C_Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_Homepage" EntityType="Self.C_Homepage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_Mission" EntityType="Self.C_Mission" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_News" EntityType="Self.C_News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_Policy" EntityType="Self.C_Policy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_Product" EntityType="Self.C_Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_Project" EntityType="Self.C_Project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_Recruitment" EntityType="Self.C_Recruitment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_Slider" EntityType="Self.C_Slider" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CompanyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C_Project">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ContentProject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="CompanyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C_Project" EntityType="Self.C_Project" />
+          <EntitySet Name="C_About" EntityType="CompanyModel.C_About" />
+          <EntitySet Name="C_Mission" EntityType="CompanyModel.C_Mission" />
+          <EntitySet Name="C_Policy" EntityType="CompanyModel.C_Policy" />
+          <EntitySet Name="C_Contact" EntityType="CompanyModel.C_Contact" />
+          <EntitySet Name="C_News" EntityType="CompanyModel.C_News" />
+          <EntitySet Name="C_Recruitment" EntityType="CompanyModel.C_Recruitment" />
+          <EntitySet Name="C__MigrationHistory" EntityType="CompanyModel.C__MigrationHistory" />
+          <EntitySet Name="AspNetRoles" EntityType="CompanyModel.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="CompanyModel.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="CompanyModel.AspNetUserLogin" />
+          <EntitySet Name="AspNetUsers" EntityType="CompanyModel.AspNetUser" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="CompanyModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="CompanyModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="CompanyModel.AspNetUserRoles">
+            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <EntitySet Name="C_Slider" EntityType="CompanyModel.C_Slider" />
+          <EntitySet Name="C_Homepage" EntityType="CompanyModel.C_Homepage" />
+          <EntitySet Name="C_Product" EntityType="CompanyModel.C_Product" />
+        </EntityContainer>
+        <EntityType Name="C_About">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ContentAbout" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Picture" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SubContent01" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubContent02" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_Mission">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubContentTitle01" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubContent01" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubContentTitle02" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubContent02" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubContentTitle03" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubContent03" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_Policy">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContentPolicy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ContentNews" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_Recruitment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContentRecruit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Picture" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="CompanyModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="CompanyModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="CompanyModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="CompanyModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="CompanyModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+          <NavigationProperty Name="AspNetRoles" Relationship="CompanyModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Type="CompanyModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="CompanyModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaim">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Type="CompanyModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="CompanyModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogin">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Type="CompanyModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+          <End Type="CompanyModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+        </Association>
+        <EntityType Name="C_Slider">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_Homepage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title01" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content01" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Title02" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content02" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Title03" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content03" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Picture01" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Title04" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle01" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TextTitle01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Text01" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TextTitle02" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Text02" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TextTitle03" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Text03" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TextTitle04" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Text04" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TextTitle05" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Text05" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TextTitle06" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Text06" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Title05" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle02" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title06" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle03" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Picture02" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Picture03" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Picture04" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CareerTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CareerContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BusinessTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BusinessContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CompanyModelStoreContainer" CdmEntityContainer="CompanyEntities">
+          <EntitySetMapping Name="C_Project">
+            <EntityTypeMapping TypeName="CompanyModel.C_Project">
+              <MappingFragment StoreEntitySet="C_Project">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="ContentProject" ColumnName="ContentProject" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_About">
+            <EntityTypeMapping TypeName="CompanyModel.C_About">
+              <MappingFragment StoreEntitySet="C_About">
+                <ScalarProperty Name="SubContent02" ColumnName="SubContent02" />
+                <ScalarProperty Name="SubContent01" ColumnName="SubContent01" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="ContentAbout" ColumnName="ContentAbout" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_Mission">
+            <EntityTypeMapping TypeName="CompanyModel.C_Mission">
+              <MappingFragment StoreEntitySet="C_Mission">
+                <ScalarProperty Name="SubContent03" ColumnName="SubContent03" />
+                <ScalarProperty Name="SubContentTitle03" ColumnName="SubContentTitle03" />
+                <ScalarProperty Name="SubContent02" ColumnName="SubContent02" />
+                <ScalarProperty Name="SubContentTitle02" ColumnName="SubContentTitle02" />
+                <ScalarProperty Name="SubContent01" ColumnName="SubContent01" />
+                <ScalarProperty Name="SubContentTitle01" ColumnName="SubContentTitle01" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_Policy">
+            <EntityTypeMapping TypeName="CompanyModel.C_Policy">
+              <MappingFragment StoreEntitySet="C_Policy">
+                <ScalarProperty Name="ContentPolicy" ColumnName="ContentPolicy" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_Contact">
+            <EntityTypeMapping TypeName="CompanyModel.C_Contact">
+              <MappingFragment StoreEntitySet="C_Contact">
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_News">
+            <EntityTypeMapping TypeName="CompanyModel.C_News">
+              <MappingFragment StoreEntitySet="C_News">
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ContentNews" ColumnName="ContentNews" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_Recruitment">
+            <EntityTypeMapping TypeName="CompanyModel.C_Recruitment">
+              <MappingFragment StoreEntitySet="C_Recruitment">
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ContentRecruit" ColumnName="ContentRecruit" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="CompanyModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="CompanyModel.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="CompanyModel.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="CompanyModel.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="CompanyModel.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="CompanyModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="AspNetRole">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="C_Slider">
+            <EntityTypeMapping TypeName="CompanyModel.C_Slider">
+              <MappingFragment StoreEntitySet="C_Slider">
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_Homepage">
+            <EntityTypeMapping TypeName="CompanyModel.C_Homepage">
+              <MappingFragment StoreEntitySet="C_Homepage">
+                <ScalarProperty Name="Picture04" ColumnName="Picture04" />
+                <ScalarProperty Name="Picture03" ColumnName="Picture03" />
+                <ScalarProperty Name="Picture02" ColumnName="Picture02" />
+                <ScalarProperty Name="SubTitle03" ColumnName="SubTitle03" />
+                <ScalarProperty Name="Title06" ColumnName="Title06" />
+                <ScalarProperty Name="SubTitle02" ColumnName="SubTitle02" />
+                <ScalarProperty Name="Title05" ColumnName="Title05" />
+                <ScalarProperty Name="Text06" ColumnName="Text06" />
+                <ScalarProperty Name="TextTitle06" ColumnName="TextTitle06" />
+                <ScalarProperty Name="Text05" ColumnName="Text05" />
+                <ScalarProperty Name="TextTitle05" ColumnName="TextTitle05" />
+                <ScalarProperty Name="Text04" ColumnName="Text04" />
+                <ScalarProperty Name="TextTitle04" ColumnName="TextTitle04" />
+                <ScalarProperty Name="Text03" ColumnName="Text03" />
+                <ScalarProperty Name="TextTitle03" ColumnName="TextTitle03" />
+                <ScalarProperty Name="Text02" ColumnName="Text02" />
+                <ScalarProperty Name="TextTitle02" ColumnName="TextTitle02" />
+                <ScalarProperty Name="Text01" ColumnName="Text01" />
+                <ScalarProperty Name="TextTitle01" ColumnName="TextTitle01" />
+                <ScalarProperty Name="SubTitle01" ColumnName="SubTitle01" />
+                <ScalarProperty Name="Title04" ColumnName="Title04" />
+                <ScalarProperty Name="Picture01" ColumnName="Picture01" />
+                <ScalarProperty Name="Content03" ColumnName="Content03" />
+                <ScalarProperty Name="Title03" ColumnName="Title03" />
+                <ScalarProperty Name="Content02" ColumnName="Content02" />
+                <ScalarProperty Name="Title02" ColumnName="Title02" />
+                <ScalarProperty Name="Content01" ColumnName="Content01" />
+                <ScalarProperty Name="Title01" ColumnName="Title01" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_Product">
+            <EntityTypeMapping TypeName="CompanyModel.C_Product">
+              <MappingFragment StoreEntitySet="C_Product">
+                <ScalarProperty Name="BusinessContent" ColumnName="BusinessContent" />
+                <ScalarProperty Name="BusinessTitle" ColumnName="BusinessTitle" />
+                <ScalarProperty Name="CareerContent" ColumnName="CareerContent" />
+                <ScalarProperty Name="CareerTitle" ColumnName="CareerTitle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

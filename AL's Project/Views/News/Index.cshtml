@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- LATEST BLOG -->
+<section class="latest-blog section-grey" id="latest-blog" ng-controller="newsController">
+    <div class="container-fluid wide">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <!-- H1 HEADING -->
+                <h1>Latest Blog Post</h1>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="main-heading-text">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typeseing industry Lorem Ipsum has been the industry's standard
+                            dummy text Lorem is simply dummy text of the printing and
+                        </p>
+                    </div>
+                </div>
+
+                <!--- blog post 1 -->
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-repeat="n in newss">
+                    <div class="blog-post-box">
+                        <!--- image -->
+                        <figure> <img src="~/Images/News/{{n.Avatar}}" alt="blogpostimg"></figure>
+                        <div class="blog-post-content">
+                            <!--- admin details -->
+                            <ul>
+                                <li> đăng bởi {{n.Author}}</li>
+                            </ul>
+                            <!--- title -->
+                            <a href="#">
+                                <h4>{{n.Title}} </h4>
+                            </a>
+                            <!--- date -->
+                            <span> {{n.Date}}</span>
+                            <!--- paragraph -->
+                            <p ng-bind-html="n.ContentNews"></p>
+                        </div>
+                    </div>
+                    <a class="blog-more-button" href="javascript:void(0)" ng-click="detail(n.Id)">Xem chi tiết </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/Content/Website/angular/news/NewsModel.js"></script>
+<script src="~/Content/Website/angular/news/NewsService.js"></script>
+<script src="~/Content/Website/angular/news/NewsController.js"></script>

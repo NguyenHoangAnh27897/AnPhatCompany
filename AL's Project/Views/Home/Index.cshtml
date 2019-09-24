@@ -1,0 +1,697 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+    <div ng-controller="homepageController">
+        <!-- STORE ICONS -->
+        <section class="site-store-icons" style="display:none;">
+            <div class="align-center">
+
+                <!-- BUTTON 1 -->
+                <a href="#">
+                    <!-- FIGURE -->
+                    <figure><i class="fa fa-mobile"></i></figure>
+                    <!-- h6 heading -->
+                    <h6>Available on the</h6>
+                    <!-- h5 -->
+                    <h5>iOS App Store</h5>
+                </a>
+
+                <!-- BUTTON 2 -->
+                <a href="#">
+                    <!-- FIGURE -->
+                    <figure><img src="~/Content/Website/images/store-google-icon.png" alt="store icon"></figure>
+                    <!-- h6 heading -->
+                    <h6>Available on the</h6>
+                    <!-- h5 -->
+                    <h5>Google Store</h5>
+                </a>
+
+                <!-- BUTTON 3 -->
+                <a href="#">
+                    <!-- FIGURE -->
+                    <figure><i class="fa fa-windows adjust"></i></figure>
+                    <!-- h6 heading -->
+                    <h6>Available on the</h6>
+                    <!-- h5 -->
+                    <h5>Windows Store</h5>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- AMAZING FEATURES -->
+        <section id="amazing-features" class="site-amazing-features section-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <!-- H1 HEADING -->
+                        <h1>Amazing Features</h1>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4">
+
+                                <!-- FEATURE 1 -->
+                                <div class="features move wow fadeInDown" data-wow-duration="1s">
+                                    <!-- ICON -->
+                                    <figure><span class=""> <img src="~/Content/Website/images/feature1.png" alt="feature1"> </span></figure>
+                                    <!-- H5 HEADING -->
+                                    <h5>{{homepage.Title01}}</h5>
+                                    <!-- PARAGRAPH -->
+                                    <p>
+                                        {{homepage.Content01}}
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+
+                                <!-- FEATURE 1 -->
+                                <div class="features wow fadeInDown" data-wow-duration="2s">
+                                    <!-- ICON -->
+                                    <figure><span class=""><img src="~/Content/Website/images/feature2.png" feature2></span></figure>
+                                    <!-- H5 HEADING -->
+                                    <h5>{{homepage.Title02}}</h5>
+                                    <!-- PARAGRAPH -->
+                                    <p>
+                                        {{homepage.Content02}}
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+
+                                <!-- FEATURE 1 -->
+                                <div class="features move wow fadeInDown" data-wow-duration="3s">
+                                    <!-- ICON -->
+                                    <figure><span class=""> <img src="~/Content/Website/images/feature3.png" alt="feature3"></span></figure>
+                                    <!-- H5 HEADING -->
+                                    <h5>{{homepage.Title03}}</h5>
+                                    <!-- PARAGRAPH -->
+                                    <p>
+                                        {{homepage.Content03}}
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12">
+
+                                <!-- Mobile PICTURE -->
+                                <figure class="device wow fadeInUp" data-wow-duration="3s">
+                                    <img src="~/Content/Website/images/features-mobile.png" alt="Device">
+                                </figure>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MORE FEATURES -->
+        <div class="site-more-features section-blue solid-color" id="site-more-features">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <!-- heading -->
+                        <h1>{{homepage.Title04}}</h1>
+                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+                            <div class="heading-text">
+                                <p ng-bind-html="homepage.SubTitle01">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
+                        </div>
+                    </div>
+
+                    <!-- clearfix -->
+                    <div class="clearfix"></div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-md-push-4">
+
+                        <!-- mobile image -->
+                        <figure class="featured-img wow fadeInDown" data-wow-duration="2s">
+                            <img src="~/Content/Website/images/feature-mobile.png" alt="Image">
+                        </figure>
+                        <!-- end -->
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-4">
+
+                        <!-- feature 1 -->
+                        <div class="feature align-right">
+                            <h5>{{homepage.TextTitle01}}</h5>
+                            <p>{{homepage.Text01}}</p>
+                            <figure>
+                                <span class="icon-micro"></span>
+                            </figure>
+                        </div>
+
+                        <!-- feature 2 -->
+                        <div class="feature align-right move">
+                            <h5>{{homepage.TextTitle02}}</h5>
+                            <p>{{homepage.Text02}}</p>
+                            <figure>
+                                <span class="icon-portfolio"></span>
+                            </figure>
+                        </div>
+
+                        <!-- feature 3 -->
+                        <div class="feature align-right">
+                            <h5>{{homepage.TextTitle03}}</h5>
+                            <p>{{homepage.Text03}}</p>
+                            <figure>
+                                <span class="icon-chat"></span>
+                            </figure>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+
+                        <!-- feature 1 -->
+                        <div class="feature align-left">
+                            <h5>{{homepage.TextTitle04}}</h5>
+                            <p>{{homepage.Text04}}</p>
+                            <figure>
+                                <span class="icon-albums"></span>
+                            </figure>
+                        </div>
+
+                        <!-- feature 2 -->
+                        <div class="feature align-left move">
+                            <h5>{{homepage.TextTitle05}}</h5>
+                            <p>{{homepage.Text05}}</p>
+                            <figure>
+                                <span class="icon-lock"></span>
+                            </figure>
+                        </div>
+
+                        <!-- feature 3 -->
+                        <div class="feature align-left">
+                            <h5>{{homepage.TextTitle06}}</h5>
+                            <p>{{homepage.Text06}}</p>
+                            <figure>
+                                <span class="icon-moon"></span>
+                            </figure>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LEFT CONTENT & RIGHT IMAGE -->
+        <section id="left-content-section" class="site-amazing-features left-heading two-colom-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                        <div class="half-colom-left-section">
+                            <!-- H1 HEADING -->
+                            <div class="left-heading-icon wow fadeInLeft" data-wow-duration="2s">
+                                <img src="~/Content/Website/images/design-icon.png" alt="designicon">
+                            </div>
+                            <h1>{{homepage.Title05}} </h1>
+                            <div class="two-colom-content">
+                                <p ng-bind-html="homepage.SubTitle02">
+                                    
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="half-colom-right-section wow fadeInDown" data-wow-duration="2s">
+                            <img src="~/Content/Website/images/right-image1.png" alt="rightimage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEFT IMAGE & RIGHT  CONTENT -->
+        <section id="right-content-section" class="site-amazing-features left-heading two-colom-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-push-6">
+                        <div class="half-colom-left-section half-colom-padding">
+                            <!-- H1 HEADING -->
+                            <div class="left-heading-icon wow fadeInRight" data-wow-duration="2s">
+                                <img src="~/Content/Website/images/perfomance-icon.png" alt="perfomanceicon">
+                            </div>
+                            <h1>{{homepage.Title06}} </h1>
+                            <div class="two-colom-content">
+                                <p ng-bind-html="homepage.SubTitle03">
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-pull-6 ">
+                        <div class="half-colom-right-section wow fadeInLeft" data-wow-duration="2s">
+                            <img src="~/Content/Website/images/left-image1.png" alt="leftimage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="site-how-it-works section-grey" id="how-it-works">
+            <div class="container-fluid wide">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <!-- H1 HEADING -->
+                        <h1>How it Works?</h1>
+
+                        <!-- START SLIDER -->
+                        <!-- Slider main container -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-11 ">
+                                    <div class="swiper-container" id="how-it-works-slider">
+                                        <!-- Additional required wrapper -->
+                                        <ul class="swiper-wrapper">
+                                            <!-- Slides -->
+                                            <!-- SLIDE 1 -->
+                                            <li class="swiper-slide">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                        <!-- H5 HEADING -->
+                                                        <h3>First tab title - How to install ?</h3>
+                                                        <!-- PARAGRAPH -->
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typese
+                                                            ing industry Lorem Ipsum has been the industry's standard
+                                                            dummy text Lorem is simply dummy
+                                                        </p>
+
+                                                        <!-- BOX -->
+                                                        <div class="section first">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-config"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Confing your mobile</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text of the printing and typing
+                                                                indus try Lorem Ipsum has been the indus.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- BOX -->
+                                                        <div class="section">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-refresh"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Refresh setup</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Simply dummy text of the printing and typing indus try Lorem
+                                                                Ipsum has been the indus try's standard.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- BOX -->
+                                                        <div class="section">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-comment"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Chat with your love</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Ipsum is simply dummy text of the printing and typing indus
+                                                                try Lorem Ipsum has been the indus standard.
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                        <!-- DEVICE -->
+                                                        <figure class="device">
+                                                            <img src="~/Content/Website/images/how-it-works-device.png" alt="Device">
+                                                        </figure>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <!-- SLIDE 2 -->
+                                            <li class="swiper-slide">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                        <!-- H5 HEADING -->
+                                                        <h3>First tab title - How to install ?</h3>
+                                                        <!-- PARAGRAPH -->
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typese
+                                                            ing industry Lorem Ipsum has been the industry's standard
+                                                            dummy text Lorem is simply dummy
+                                                        </p>
+
+                                                        <!-- BOX -->
+                                                        <div class="section first">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-config"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Confing your mobile</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text of the printing and typing
+                                                                indus try Lorem Ipsum has been the indus.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- BOX -->
+                                                        <div class="section">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-refresh"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Refresh setup</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Simply dummy text of the printing and typing indus try Lorem
+                                                                Ipsum has been the indus try's standard.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- BOX -->
+                                                        <div class="section">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-comment"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Chat with your love</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Ipsum is simply dummy text of the printing and typing indus
+                                                                try Lorem Ipsum has been the indus standard.
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                        <!-- DEVICE -->
+                                                        <figure class="device">
+                                                            <img src="~/Content/Website/images/how-it-works-screen2.png" alt="Device">
+                                                        </figure>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <!-- SLIDE 3 -->
+                                            <li class="swiper-slide">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                        <!-- H5 HEADING -->
+                                                        <h3>First tab title - How to install ?</h3>
+                                                        <!-- PARAGRAPH -->
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typese
+                                                            ing industry Lorem Ipsum has been the industry's standard
+                                                            dummy text Lorem is simply dummy
+                                                        </p>
+
+                                                        <!-- BOX -->
+                                                        <div class="section first">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-config"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Confing your mobile</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text of the printing and typing
+                                                                indus try Lorem Ipsum has been the indus.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- BOX -->
+                                                        <div class="section">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-refresh"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Refresh setup</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Simply dummy text of the printing and typing indus try Lorem
+                                                                Ipsum has been the indus try's standard.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- BOX -->
+                                                        <div class="section">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-comment"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Chat with your love</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Ipsum is simply dummy text of the printing and typing indus
+                                                                try Lorem Ipsum has been the indus standard.
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                        <!-- DEVICE -->
+                                                        <figure class="device">
+                                                            <img src="~/Content/Website/images/how-it-works-device.png" alt="Device">
+                                                        </figure>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <!-- SLIDE 4 -->
+                                            <li class="swiper-slide">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                        <!-- H5 HEADING -->
+                                                        <h3>First tab title - How to install ?</h3>
+                                                        <!-- PARAGRAPH -->
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typese
+                                                            ing industry Lorem Ipsum has been the industry's standard
+                                                            dummy text Lorem is simply dummy
+                                                        </p>
+
+                                                        <!-- BOX -->
+                                                        <div class="section first">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-config"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Confing your mobile</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text of the printing and typing
+                                                                indus try Lorem Ipsum has been the indus.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- BOX -->
+                                                        <div class="section">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-refresh"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Refresh setup</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Simply dummy text of the printing and typing indus try Lorem
+                                                                Ipsum has been the indus try's standard.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- BOX -->
+                                                        <div class="section">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-comment"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Chat with your love</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Ipsum is simply dummy text of the printing and typing indus
+                                                                try Lorem Ipsum has been the indus standard.
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                        <!-- DEVICE -->
+                                                        <figure class="device">
+                                                            <img src="~/Content/Website/images/how-it-works-screen2.png" alt="Device">
+                                                        </figure>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <!-- SLIDE 5 -->
+                                            <li class="swiper-slide">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                        <!-- H5 HEADING -->
+                                                        <h3>First tab title - How to install ?</h3>
+                                                        <!-- PARAGRAPH -->
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typese
+                                                            ing industry Lorem Ipsum has been the industry's standard
+                                                            dummy text Lorem is simply dummy
+                                                        </p>
+
+                                                        <!-- BOX -->
+                                                        <div class="section first">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-config"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Confing your mobile</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text of the printing and typing
+                                                                indus try Lorem Ipsum has been the indus.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- BOX -->
+                                                        <div class="section">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-refresh"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Refresh setup</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Simply dummy text of the printing and typing indus try Lorem
+                                                                Ipsum has been the indus try's standard.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- BOX -->
+                                                        <div class="section">
+                                                            <!-- FIGURE -->
+                                                            <figure><span class="icon-comment"></span></figure>
+                                                            <!-- H4 HEADING -->
+                                                            <h4>Chat with your love</h4>
+                                                            <!-- PARAGRAPH -->
+                                                            <p>
+                                                                Ipsum is simply dummy text of the printing and typing indus
+                                                                try Lorem Ipsum has been the indus standard.
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                        <!-- DEVICE -->
+                                                        <figure class="device">
+                                                            <img src="~/Content/Website/images/how-it-works-device.png" alt="Device">
+                                                        </figure>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- If we need navigation buttons -->
+                        <div id="how-it-works-prev" class="swiper-button-prev"><i class="fa fa-angle-up hidden-xs"></i><span class="icon-play-flip visible-xs"></span></div>
+                        <div id="how-it-works-next" class="swiper-button-next"><i class="fa fa-angle-down hidden-xs"></i><span class="icon-play visible-xs"></span></div>
+
+                        <!-- If we need pagination -->
+                        <div id="how-it-works-paging" class="swiper-pagination" data-icons='[
+                         "fa fa-mobile",
+                         "icon-config",
+                         "icon-help",
+                         "fa fa-shopping-basket",
+                         "icon-unlock",
+                         "icon-shopbag"
+                         ]'></div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTIC -->
+        <section class="site-statistic section-white" id="site-statistic">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0">
+                        <!-- number -->
+                        <div class="site-number">
+                            <!-- icon -->
+                            <div class="stat-icon"> <img src="~/Content/Website/images/cloud.png" alt="cloud"></div>
+                            <!-- h5 heading -->
+                            <h5 class="counter-count">200 <span>K</span></h5>
+                            <!-- paragraph -->
+                            <p>App Download</p>
+                        </div>
+                        <!-- end -->
+                    </div>
+                    <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0">
+                        <!-- number -->
+                        <div class="site-number">
+                            <!-- icon -->
+                            <div class="stat-icon"> <img src="~/Content/Website/images/thumbsup.png" alt="thumbsup"></div>
+                            <!-- h5 heading -->
+                            <h5 class="counter-count">50 <span>K</span></h5>
+                            <!-- paragraph -->
+                            <p>Free Download</p>
+                        </div>
+                        <!-- end -->
+                    </div>
+                    <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0">
+                        <!-- number -->
+                        <div class="site-number">
+                            <!-- icon -->
+                            <div class="stat-icon"> <img src="~/Content/Website/images/users.png" alt="users"></div>
+                            <!-- h5 heading -->
+                            <h5 class="counter-count">95 <span>%</span></h5>
+                            <!-- paragraph -->
+                            <p>Return Customers</p>
+                        </div>
+                        <!-- end -->
+                    </div>
+                    <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0">
+                        <!-- number -->
+                        <div class="site-number">
+                            <!-- icon -->
+                            <div class="stat-icon"> <img src="~/Content/Website/images/star.png" alt="star"></div>
+                            <!-- h5 heading -->
+                            <h5 class="counter-count">10 <span>+</span></h5>
+                            <!-- paragraph -->
+                            <p>Best Awards</p>
+                        </div>
+                        <!-- end -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+<script src="~/Content/Website/angular/homepage/HomepageModel.js"></script>
+<script src="~/Content/Website/angular/homepage/HomepageService.js"></script>
+<script src="~/Content/Website/angular/homepage/HomepageController.js"></script>

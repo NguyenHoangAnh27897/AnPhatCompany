@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- TEAM -->
+<section class="site-team section-white" id="site-team" ng-controller="recruitController">
+    <div class="container-fluid wide">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <!-- heading -->
+                <h1>Innovative Team</h1>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="main-heading-text">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typeseing industry Lorem Ipsum has been the industry's standard
+                            dummy text Lorem is simply dummy text of the printing and
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                </div>
+
+                <!-- Slider main container -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="swiper-container" id="team-slider">
+
+                                <!-- Additional required wrapper -->
+                                <ul class="swiper-wrapper">
+
+                                    <!-- slide 1 -->
+                                    <li class="swiper-slide" ng-repeat="r in recruits">
+                                        <!-- box -->
+                                        <div class="site-box">
+                                            <!-- image -->
+                                            <figure>
+                                                <img src="~/Images/Recruit/{{r.Picture}}" alt="">
+                                            </figure>
+                                            <!-- heading -->
+                                            <h5><a href="javascript:void(0)" ng-click="detail(r.Id)">{{r.Title}}</a></h5>
+                                            <!-- description -->
+                                            <h6>{{r.Position}}</h6>
+                                            <!-- paragraph -->
+                                            <p ng-bind-html="r.ContentRecruit">
+                                            </p>
+                                            <!-- social icons -->
+                                            @*<div class="site-social-icons">
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            </div>*@
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div id="team-prev" class="swiper-button-prev hidden-lg"><span class="icon-play-flip"></span></div>
+                <div id="team-next" class="swiper-button-next hidden-lg"><span class="icon-play"></span></div>
+
+                <!-- If we need pagination -->
+                <div id="team-paging" class="swiper-pagination visible-xs"></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/Content/Website/angular/recruit/RecruitModel.js"></script>
+<script src="~/Content/Website/angular/recruit/RecruitService.js"></script>
+<script src="~/Content/Website/angular/recruit/RecruitController.js"></script>
+

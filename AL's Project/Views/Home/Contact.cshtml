@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<!-- DOWNLOAD -->
+<section id="site-download" class="site-download section-blue" ng-controller="contactController">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <!-- H1 HEADING -->
+                <h1>Liên hệ với chúng tôi</h1>
+                <!-- DOWNLOAD ICONS -->
+                <section class="site-download-icons">
+                    <div class="align-center">
+
+                        <!-- BUTTON 1 -->
+                        <a href="#" class="app-download-icons wow fadeInLeft" data-wow-duration="1s">
+                            <!-- FIGURE -->
+                            <figure><i class="fa fa-mobile"></i></figure>
+                            <!-- h5 -->
+                            <h5>{{contact.Address}}</h5>
+                        </a>
+
+                        <!-- BUTTON 2 -->
+                        <a href="#" class="app-download-icons wow fadeInDown" data-wow-duration="2s">
+                            <!-- FIGURE -->
+                            <figure><i class="fa fa-mobile"></i></figure>
+                            <!-- h5 -->
+                            <h5>{{contact.Phone}}</h5>
+                        </a>
+
+                        <!-- BUTTON 3 -->
+                        <a href="#" class="app-download-icons wow fadeInRight" data-wow-duration="3s">
+                            <!-- FIGURE -->
+                            <figure><i class="fa fa-mobile"></i></figure>
+                            <!-- h5 -->
+                            <h5>{{contact.Email}}</h5>
+                        </a>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/Content/Website/angular/contact/ContactModel.js"></script>
+<script src="~/Content/Website/angular/contact/ContactService.js"></script>
+<script src="~/Content/Website/angular/contact/ContactController.js"></script>

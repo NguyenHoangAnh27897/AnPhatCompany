@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CompanyModelStoreContainer" CdmEntityContainer="CompanyEntities">
+    <EntitySetMapping Name="C_Project">
+      <EntityTypeMapping TypeName="CompanyModel.C_Project">
+        <MappingFragment StoreEntitySet="C_Project">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="ContentProject" ColumnName="ContentProject" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_About">
+      <EntityTypeMapping TypeName="CompanyModel.C_About">
+        <MappingFragment StoreEntitySet="C_About">
+          <ScalarProperty Name="SubContent02" ColumnName="SubContent02" />
+          <ScalarProperty Name="SubContent01" ColumnName="SubContent01" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="ContentAbout" ColumnName="ContentAbout" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Mission">
+      <EntityTypeMapping TypeName="CompanyModel.C_Mission">
+        <MappingFragment StoreEntitySet="C_Mission">
+          <ScalarProperty Name="SubContent03" ColumnName="SubContent03" />
+          <ScalarProperty Name="SubContentTitle03" ColumnName="SubContentTitle03" />
+          <ScalarProperty Name="SubContent02" ColumnName="SubContent02" />
+          <ScalarProperty Name="SubContentTitle02" ColumnName="SubContentTitle02" />
+          <ScalarProperty Name="SubContent01" ColumnName="SubContent01" />
+          <ScalarProperty Name="SubContentTitle01" ColumnName="SubContentTitle01" />
+          <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Policy">
+      <EntityTypeMapping TypeName="CompanyModel.C_Policy">
+        <MappingFragment StoreEntitySet="C_Policy">
+          <ScalarProperty Name="ContentPolicy" ColumnName="ContentPolicy" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Contact">
+      <EntityTypeMapping TypeName="CompanyModel.C_Contact">
+        <MappingFragment StoreEntitySet="C_Contact">
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_News">
+      <EntityTypeMapping TypeName="CompanyModel.C_News">
+        <MappingFragment StoreEntitySet="C_News">
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ContentNews" ColumnName="ContentNews" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Recruitment">
+      <EntityTypeMapping TypeName="CompanyModel.C_Recruitment">
+        <MappingFragment StoreEntitySet="C_Recruitment">
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ContentRecruit" ColumnName="ContentRecruit" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="CompanyModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="CompanyModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="CompanyModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="CompanyModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="CompanyModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="CompanyModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="C_Slider">
+      <EntityTypeMapping TypeName="CompanyModel.C_Slider">
+        <MappingFragment StoreEntitySet="C_Slider">
+          <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Homepage">
+      <EntityTypeMapping TypeName="CompanyModel.C_Homepage">
+        <MappingFragment StoreEntitySet="C_Homepage">
+          <ScalarProperty Name="Picture04" ColumnName="Picture04" />
+          <ScalarProperty Name="Picture03" ColumnName="Picture03" />
+          <ScalarProperty Name="Picture02" ColumnName="Picture02" />
+          <ScalarProperty Name="SubTitle03" ColumnName="SubTitle03" />
+          <ScalarProperty Name="Title06" ColumnName="Title06" />
+          <ScalarProperty Name="SubTitle02" ColumnName="SubTitle02" />
+          <ScalarProperty Name="Title05" ColumnName="Title05" />
+          <ScalarProperty Name="Text06" ColumnName="Text06" />
+          <ScalarProperty Name="TextTitle06" ColumnName="TextTitle06" />
+          <ScalarProperty Name="Text05" ColumnName="Text05" />
+          <ScalarProperty Name="TextTitle05" ColumnName="TextTitle05" />
+          <ScalarProperty Name="Text04" ColumnName="Text04" />
+          <ScalarProperty Name="TextTitle04" ColumnName="TextTitle04" />
+          <ScalarProperty Name="Text03" ColumnName="Text03" />
+          <ScalarProperty Name="TextTitle03" ColumnName="TextTitle03" />
+          <ScalarProperty Name="Text02" ColumnName="Text02" />
+          <ScalarProperty Name="TextTitle02" ColumnName="TextTitle02" />
+          <ScalarProperty Name="Text01" ColumnName="Text01" />
+          <ScalarProperty Name="TextTitle01" ColumnName="TextTitle01" />
+          <ScalarProperty Name="SubTitle01" ColumnName="SubTitle01" />
+          <ScalarProperty Name="Title04" ColumnName="Title04" />
+          <ScalarProperty Name="Picture01" ColumnName="Picture01" />
+          <ScalarProperty Name="Content03" ColumnName="Content03" />
+          <ScalarProperty Name="Title03" ColumnName="Title03" />
+          <ScalarProperty Name="Content02" ColumnName="Content02" />
+          <ScalarProperty Name="Title02" ColumnName="Title02" />
+          <ScalarProperty Name="Content01" ColumnName="Content01" />
+          <ScalarProperty Name="Title01" ColumnName="Title01" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Product">
+      <EntityTypeMapping TypeName="CompanyModel.C_Product">
+        <MappingFragment StoreEntitySet="C_Product">
+          <ScalarProperty Name="BusinessContent" ColumnName="BusinessContent" />
+          <ScalarProperty Name="BusinessTitle" ColumnName="BusinessTitle" />
+          <ScalarProperty Name="CareerContent" ColumnName="CareerContent" />
+          <ScalarProperty Name="CareerTitle" ColumnName="CareerTitle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

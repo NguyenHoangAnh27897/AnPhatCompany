@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<!-- ABOUT APP -->
+<section id="about-smart" class="site-about-app left-heading section-grey" ng-controller="aboutController">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6">
+
+                <div class="about-half-colom-section">
+                    <!-- H1 HEADING -->
+                    <h1>{{about.Title}}</h1>
+                    <div class="about-half-colom-section-content">
+                        <p ng-bind-html="about.ContentAbout | unsafe"></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="about-half-colom-section-image wow fadeInRight" data-wow-duration="2s">
+                    <img src="~/Images/About/{{about.Picture}}" alt="aboutimg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/Content/Website/angular/about/AboutModel.js"></script>
+<script src="~/Content/Website/angular/about/AboutService.js"></script>
+<script src="~/Content/Website/angular/about/AboutController.js"></script>

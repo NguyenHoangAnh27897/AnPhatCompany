@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Single";
+}
+
+<!-- LEFT CONTENT & RIGHT IMAGE -->
+<section id="left-content-section" class="site-amazing-features left-heading two-colom-section" ng-controller="detailprojectController">
+    <div class="container">
+        <div class="half-colom-right-section wow fadeInDown" data-wow-duration="2s">
+            <img src="~/Images/Project/{{project.Avatar}}" alt="rightimage">
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+
+                <div class="half-colom-left-section">
+                    <!-- H1 HEADING -->
+                    <h1>{{project.Title}} </h1>
+                    <div class="two-colom-content">
+                        <p ng-bind-html="project.ContentProject">
+
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/Content/Website/angular/singleproject/SingleProjectModel.js"></script>
+<script src="~/Content/Website/angular/singleproject/SingleProjectService.js"></script>
+<script src="~/Content/Website/angular/singleproject/SingleProjectController.js"></script>
+
