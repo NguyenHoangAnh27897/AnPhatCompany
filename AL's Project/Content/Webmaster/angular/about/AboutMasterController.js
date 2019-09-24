@@ -19,7 +19,7 @@
             About.Picture = picname;
         }
         AboutService.EditAbout(About).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             $scope.about = ret.ab;
             picname = null;
         }, function () {

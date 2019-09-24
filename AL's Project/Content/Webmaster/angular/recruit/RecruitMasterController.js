@@ -45,7 +45,7 @@
         com.ContentRecruit = CKEDITOR.instances['content'].getData();
         com.Picture = picname;
         RecruitMasterService.AddRecruit(com).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             angular.forEach(ret.re, function (value, key) {
                 if (value.Date != null) {
                     var date = new Date(parseInt(value.Date.replace('/Date(', '')));
@@ -61,7 +61,7 @@
 
     $scope.delete = function (Id, index) {
         RecruitMasterService.Delete(Id).success(function (ret) {
-            alert(ret.msg)
+            toastr.success(ret.msg, 'Thành công')
             $scope.recruits.splice(index, 1);
         }).error(function () {
             alert('Có lỗi xảy ra');
@@ -87,7 +87,7 @@
         }
         console.log(picname)
         RecruitMasterService.EditRecruit(Blog).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             angular.forEach(ret.re, function (value, key) {
                 if (value.Date != null) {
                     var date = new Date(parseInt(value.Date.replace('/Date(', '')));

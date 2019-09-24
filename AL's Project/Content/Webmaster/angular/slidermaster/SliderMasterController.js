@@ -15,7 +15,7 @@
         slider.Id = 1;
         slider.SubTitle = CKEDITOR.instances['content'].getData();
         SliderMasterService.EditSlider(slider).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             $scope.slider = ret.sli;
         }, function () {
             alert('Có lỗi xảy ra');

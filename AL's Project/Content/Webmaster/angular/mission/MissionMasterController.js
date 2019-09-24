@@ -15,7 +15,7 @@
         mission.Id = 1;
         mission.SubTitle = CKEDITOR.instances['content'].getData();
         MissionService.EditMission(mission).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             $scope.mission = ret.mi;
         }, function () {
             alert('Có lỗi xảy ra');

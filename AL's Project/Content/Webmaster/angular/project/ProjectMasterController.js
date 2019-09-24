@@ -45,7 +45,7 @@
         com.ContentProject = CKEDITOR.instances['content'].getData();
         com.Avatar = picname;
         ProjectMasterService.AddProject(com).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             angular.forEach(ret.pj, function (value, key) {
                 if (value.Date != null) {
                     var date = new Date(parseInt(value.Date.replace('/Date(', '')));
@@ -61,7 +61,7 @@
 
     $scope.delete = function (Id, index) {
         ProjectMasterService.Delete(Id).success(function (ret) {
-            alert(ret.msg)
+            toastr.success(ret.msg, 'Thành công')
             $scope.projects.splice(index, 1);
         }).error(function () {
             alert('Có lỗi xảy ra');
@@ -87,7 +87,7 @@
         }
         console.log(picname)
         ProjectMasterService.EditProject(Blog).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             angular.forEach(ret.pj, function (value, key) {
                 if (value.Date != null) {
                     var date = new Date(parseInt(value.Date.replace('/Date(', '')));

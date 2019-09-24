@@ -286,6 +286,8 @@
     <Content Include="Content\Webmaster\angular\slidermaster\SliderMasterController.js" />
     <Content Include="Content\Webmaster\angular\slidermaster\SliderMasterModel.js" />
     <Content Include="Content\Webmaster\angular\slidermaster\SliderMasterService.js" />
+    <Content Include="Content\Webmaster\assets\css\toastr.min.css" />
+    <Content Include="Content\Webmaster\assets\js\toastr.min.js" />
     <Content Include="Content\Website\angular\homepage\HomepageModel.js" />
     <Content Include="Content\Website\angular\homepage\HomepageService.js" />
     <Content Include="Content\Website\angular\news\NewsController.js" />

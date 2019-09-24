@@ -13,7 +13,7 @@
     $scope.EditContact = function (contact) {
         contact.Id = 1;
         ContactService.EditContact(contact).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             $scope.contact = ret.con;
         }, function () {
             alert('Có lỗi xảy ra');

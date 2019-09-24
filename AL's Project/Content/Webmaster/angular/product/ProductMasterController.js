@@ -17,7 +17,7 @@
         product.CareerContent = CKEDITOR.instances['careercontent'].getData();
         product.BusinessContent = CKEDITOR.instances['businesscontent'].getData();
         ProductService.EditProduct(product).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             $scope.product = ret.pro;
         }, function () {
             alert('Có lỗi xảy ra');

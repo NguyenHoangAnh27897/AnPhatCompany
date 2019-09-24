@@ -15,7 +15,7 @@
         policy.Id = 1;
         policy.ContentPolicy = CKEDITOR.instances['content'].getData();
         PolicyService.EditPolicy(policy).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             $scope.policy = ret.po;
         }, function () {
             alert('Có lỗi xảy ra');

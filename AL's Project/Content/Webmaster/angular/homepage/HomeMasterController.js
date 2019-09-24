@@ -19,7 +19,7 @@
         hp.SubTitle02 = CKEDITOR.instances['content1'].getData();
         hp.SubTitle03 = CKEDITOR.instances['content2'].getData();
         HomepageService.EditHomepage(hp).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             $scope.homepage = ret.hp;
         }, function () {
             alert('Có lỗi xảy ra');

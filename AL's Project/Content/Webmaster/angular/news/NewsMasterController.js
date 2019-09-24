@@ -45,7 +45,7 @@
         com.ContentNews = CKEDITOR.instances['content'].getData();
         com.Avatar = picname;
         NewsMasterService.AddNews(com).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             angular.forEach(ret.ne, function (value, key) {
                 if (value.Date != null) {
                     var date = new Date(parseInt(value.Date.replace('/Date(', '')));
@@ -61,7 +61,7 @@
 
     $scope.delete = function (Id, index) {
         NewsMasterService.Delete(Id).success(function (ret) {
-            alert(ret.msg)
+            toastr.success(ret.msg, 'Thành công')
             $scope.newss.splice(index, 1);
         }).error(function () {
             alert('Có lỗi xảy ra');
@@ -87,7 +87,7 @@
         }
         console.log(picname)
         NewsMasterService.EditNews(Blog).success(function (ret) {
-            alert(ret.msg);
+            toastr.success(ret.msg, 'Thành công')
             angular.forEach(ret.ne, function (value, key) {
                 if (value.Date != null) {
                     var date = new Date(parseInt(value.Date.replace('/Date(', '')));
